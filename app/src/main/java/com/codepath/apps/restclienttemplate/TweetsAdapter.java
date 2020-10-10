@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 import com.codepath.apps.restclienttemplate.models.Tweet;
 
 import java.util.List;
@@ -22,6 +24,7 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
 
     Context context;
     List<Tweet> tweets;
+
 
     // Pass in context and list of tweets
     public TweetsAdapter(Context context, List<Tweet> tweets) {
@@ -83,10 +86,12 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
         }
 
         public void bind(Tweet tweet) {
+            int radius = 20; // corner radius, higher value = more rounded
+            int margin = 10; // crop margin, set to 0 for corners with no crop
             tvBody.setText(tweet.body);
             tvScreenName.setText(tweet.user.screenName);
             tvRelTime.setText(TimeFormatter.getTimeDifference(tweet.createdAt));
-            Glide.with(context).load(tweet.user.profileImageURL).into(ivProfileImage);
+            Glide.with(context).load(tweet.user.profileImageURL).transform(new RoundedCornersTransformation(radius, margin)).into(ivProfileImage);
 
         }
     }

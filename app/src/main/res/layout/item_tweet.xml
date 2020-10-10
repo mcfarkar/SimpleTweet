@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/ivProfileImage"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
@@ -21,11 +21,15 @@
         android:layout_width="134dp"
         android:layout_height="20dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentEnd="false"
         android:layout_marginStart="5dp"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="213dp"
         android:layout_toEndOf="@+id/ivProfileImage"
+        android:autoLink="all"
+        android:linksClickable="true"
+        android:textSize="14sp"
+        android:textStyle="bold"
         tools:text="twitteruser123" />
 
     <TextView
@@ -36,19 +40,25 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="2dp"
         android:layout_toEndOf="@+id/ivProfileImage"
-        tools:text="This is my tweet!!" />
+        tools:text="This is my tweet!!"
+        android:autoLink="all"
+        android:linksClickable="true"
+        />
 
     <TextView
         android:id="@+id/tvRelTime"
         android:layout_width="36dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="false"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentEnd="false"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="false"
+        android:layout_marginStart="177dp"
+        android:layout_marginLeft="366dp"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp"
+        android:layout_toEndOf="@+id/tvScreenName"
         tools:text="8m" />
 </RelativeLayout>
