@@ -34,8 +34,8 @@ Added rounded corners for the images using the Glide transformations.
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/rLWa0MY.gif' />
-Video Walkthrough(https://i.imgur.com/rLWa0MY.gif)
+<img src='https://github.com/mcfarkar/SimpleTweet/blob/master/simpleTweet1.GIF' />
+[Video Walkthrough] (https://i.imgur.com/rLWa0MY.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
