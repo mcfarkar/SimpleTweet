@@ -43,6 +43,7 @@ public class TwitterClient extends OAuthBaseClient {
 						context.getString(R.string.intent_scheme), context.getPackageName(), FALLBACK_URL));
 	}
 	// DEFINE METHODS for different API endpoints here
+	// this is for endpoint: GET https://api.twitter.com/1.1/statuses/home_timeline.json
 	public void getHomeTimeline(JsonHttpResponseHandler handler) {
 		String apiUrl = getApiUrl("statuses/home_timeline.json");
 		// Can specify query string params directly or through RequestParams.
@@ -52,6 +53,7 @@ public class TwitterClient extends OAuthBaseClient {
 		client.get(apiUrl, params, handler);
 	}
 
+	// this is for endpoint: GET https://api.twitter.com/1.1/statuses/home_timeline.json
 	public void getNextPageOfTweets(JsonHttpResponseHandler handler, long maxID) {
 		String apiUrl = getApiUrl("statuses/home_timeline.json");
 		// Can specify query string params directly or through RequestParams.
@@ -59,6 +61,15 @@ public class TwitterClient extends OAuthBaseClient {
 		params.put("count", 25);
 		params.put("max_id", maxID);
 		client.get(apiUrl, params, handler);
+	}
+
+	// this is for endpoint: POST https://api.twitter.com/1.1/statuses/update.json
+	public void publishTweet(String tweetContent, JsonHttpResponseHandler handler) {
+		String apiUrl = getApiUrl("statuses/update.json");
+		// Can specify query string params directly or through RequestParams.
+		RequestParams params = new RequestParams();
+		params.put("status", tweetContent);
+		client.post(apiUrl, params, "", handler);
 	}
 
 
