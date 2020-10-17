@@ -49,7 +49,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+For the Adding Character Counting section to EditText, I needed to visit Google's Maven Repository and add the appropriate library (com.google.android.material.material-1.2.1)
 
 ## Open-source libraries used
 
