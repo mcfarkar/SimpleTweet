@@ -29,13 +29,18 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [X] New this week for Twitter branding
+  - [X] Changed base application icon to the "Twitter" bird
+  - [X] Changed “Compose” icon in the Action Bar on the top right to the vector_compose_fab icon
+  - [X] Added "Twitter" blue to the “Compose” layout (top bar, the button and the multiline text line bar)
+
+
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/sa0rAmW.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
